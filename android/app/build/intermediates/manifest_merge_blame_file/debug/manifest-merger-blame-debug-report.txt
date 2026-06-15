@@ -1,0 +1,264 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.flowsense.app"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="24"
+9        android:targetSdkVersion="34" />
+10
+11    <uses-permission android:name="android.permission.INTERNET" />
+11-->C:\Users\Vishnu\flowsense andriod\app\src\main\AndroidManifest.xml:5:5-67
+11-->C:\Users\Vishnu\flowsense andriod\app\src\main\AndroidManifest.xml:5:22-64
+12
+13    <permission
+13-->[androidx.core:core:1.12.0] D:\.gradle\caches\transforms-4\3555df434f7f40e1d6f496f611850ab3\transformed\core-1.12.0\AndroidManifest.xml:22:5-24:47
+14        android:name="com.flowsense.app.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+14-->[androidx.core:core:1.12.0] D:\.gradle\caches\transforms-4\3555df434f7f40e1d6f496f611850ab3\transformed\core-1.12.0\AndroidManifest.xml:23:9-81
+15        android:protectionLevel="signature" />
+15-->[androidx.core:core:1.12.0] D:\.gradle\caches\transforms-4\3555df434f7f40e1d6f496f611850ab3\transformed\core-1.12.0\AndroidManifest.xml:24:9-44
+16
+17    <uses-permission android:name="com.flowsense.app.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+17-->[androidx.core:core:1.12.0] D:\.gradle\caches\transforms-4\3555df434f7f40e1d6f496f611850ab3\transformed\core-1.12.0\AndroidManifest.xml:26:5-97
+17-->[androidx.core:core:1.12.0] D:\.gradle\caches\transforms-4\3555df434f7f40e1d6f496f611850ab3\transformed\core-1.12.0\AndroidManifest.xml:26:22-94
+18
+19    <application
+19-->C:\Users\Vishnu\flowsense andriod\app\src\main\AndroidManifest.xml:7:5-47:19
+20        android:allowBackup="true"
+20-->C:\Users\Vishnu\flowsense andriod\app\src\main\AndroidManifest.xml:8:9-35
+21        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+21-->[androidx.core:core:1.12.0] D:\.gradle\caches\transforms-4\3555df434f7f40e1d6f496f611850ab3\transformed\core-1.12.0\AndroidManifest.xml:28:18-86
+22        android:debuggable="true"
+23        android:extractNativeLibs="false"
+24        android:icon="@mipmap/ic_launcher"
+24-->C:\Users\Vishnu\flowsense andriod\app\src\main\AndroidManifest.xml:9:9-43
+25        android:label="FlowSense AI"
+25-->C:\Users\Vishnu\flowsense andriod\app\src\main\AndroidManifest.xml:11:9-37
+26        android:roundIcon="@mipmap/ic_launcher_round"
+26-->C:\Users\Vishnu\flowsense andriod\app\src\main\AndroidManifest.xml:10:9-54
+27        android:supportsRtl="true"
+27-->C:\Users\Vishnu\flowsense andriod\app\src\main\AndroidManifest.xml:12:9-35
+28        android:testOnly="true"
+29        android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"
+29-->C:\Users\Vishnu\flowsense andriod\app\src\main\AndroidManifest.xml:14:9-68
+30        android:usesCleartextTraffic="true" >
+30-->C:\Users\Vishnu\flowsense andriod\app\src\main\AndroidManifest.xml:13:9-44
+31        <activity
+31-->C:\Users\Vishnu\flowsense andriod\app\src\main\AndroidManifest.xml:16:9-23:20
+32            android:name="com.flowsense.app.SplashActivity"
+32-->C:\Users\Vishnu\flowsense andriod\app\src\main\AndroidManifest.xml:17:13-43
+33            android:exported="true" >
+33-->C:\Users\Vishnu\flowsense andriod\app\src\main\AndroidManifest.xml:18:13-36
+34            <intent-filter>
+34-->C:\Users\Vishnu\flowsense andriod\app\src\main\AndroidManifest.xml:19:13-22:29
+35                <action android:name="android.intent.action.MAIN" />
+35-->C:\Users\Vishnu\flowsense andriod\app\src\main\AndroidManifest.xml:20:17-69
+35-->C:\Users\Vishnu\flowsense andriod\app\src\main\AndroidManifest.xml:20:25-66
+36
+37                <category android:name="android.intent.category.LAUNCHER" />
+37-->C:\Users\Vishnu\flowsense andriod\app\src\main\AndroidManifest.xml:21:17-77
+37-->C:\Users\Vishnu\flowsense andriod\app\src\main\AndroidManifest.xml:21:27-74
+38            </intent-filter>
+39        </activity>
+40        <activity
+40-->C:\Users\Vishnu\flowsense andriod\app\src\main\AndroidManifest.xml:25:9-81
+41            android:name="com.flowsense.app.OnboardingActivity"
+41-->C:\Users\Vishnu\flowsense andriod\app\src\main\AndroidManifest.xml:25:19-53
+42            android:exported="false" />
+42-->C:\Users\Vishnu\flowsense andriod\app\src\main\AndroidManifest.xml:25:54-78
+43        <activity
+43-->C:\Users\Vishnu\flowsense andriod\app\src\main\AndroidManifest.xml:26:9-84
+44            android:name="com.flowsense.app.RoleSelectionActivity"
+44-->C:\Users\Vishnu\flowsense andriod\app\src\main\AndroidManifest.xml:26:19-56
+45            android:exported="false" />
+45-->C:\Users\Vishnu\flowsense andriod\app\src\main\AndroidManifest.xml:26:57-81
+46        <activity
+46-->C:\Users\Vishnu\flowsense andriod\app\src\main\AndroidManifest.xml:27:9-79
+47            android:name="com.flowsense.app.LoginOrgActivity"
+47-->C:\Users\Vishnu\flowsense andriod\app\src\main\AndroidManifest.xml:27:19-51
+48            android:exported="false" />
+48-->C:\Users\Vishnu\flowsense andriod\app\src\main\AndroidManifest.xml:27:52-76
+49        <activity
+49-->C:\Users\Vishnu\flowsense andriod\app\src\main\AndroidManifest.xml:28:9-80
+50            android:name="com.flowsense.app.SignupOrgActivity"
+50-->C:\Users\Vishnu\flowsense andriod\app\src\main\AndroidManifest.xml:28:19-52
+51            android:exported="false" />
+51-->C:\Users\Vishnu\flowsense andriod\app\src\main\AndroidManifest.xml:28:53-77
+52        <activity
+52-->C:\Users\Vishnu\flowsense andriod\app\src\main\AndroidManifest.xml:29:9-80
+53            android:name="com.flowsense.app.LoginUserActivity"
+53-->C:\Users\Vishnu\flowsense andriod\app\src\main\AndroidManifest.xml:29:19-52
+54            android:exported="false" />
+54-->C:\Users\Vishnu\flowsense andriod\app\src\main\AndroidManifest.xml:29:53-77
+55        <activity
+55-->C:\Users\Vishnu\flowsense andriod\app\src\main\AndroidManifest.xml:30:9-81
+56            android:name="com.flowsense.app.SignupUserActivity"
+56-->C:\Users\Vishnu\flowsense andriod\app\src\main\AndroidManifest.xml:30:19-53
+57            android:exported="false" />
+57-->C:\Users\Vishnu\flowsense andriod\app\src\main\AndroidManifest.xml:30:54-78
+58        <activity
+58-->C:\Users\Vishnu\flowsense andriod\app\src\main\AndroidManifest.xml:31:9-84
+59            android:name="com.flowsense.app.UserDashboardActivity"
+59-->C:\Users\Vishnu\flowsense andriod\app\src\main\AndroidManifest.xml:31:19-56
+60            android:exported="false" />
+60-->C:\Users\Vishnu\flowsense andriod\app\src\main\AndroidManifest.xml:31:57-81
+61        <activity
+61-->C:\Users\Vishnu\flowsense andriod\app\src\main\AndroidManifest.xml:32:9-78
+62            android:name="com.flowsense.app.MonitorActivity"
+62-->C:\Users\Vishnu\flowsense andriod\app\src\main\AndroidManifest.xml:32:19-50
+63            android:exported="false" />
+63-->C:\Users\Vishnu\flowsense andriod\app\src\main\AndroidManifest.xml:32:51-75
+64        <activity
+64-->C:\Users\Vishnu\flowsense andriod\app\src\main\AndroidManifest.xml:33:9-74
+65            android:name="com.flowsense.app.MapActivity"
+65-->C:\Users\Vishnu\flowsense andriod\app\src\main\AndroidManifest.xml:33:19-46
+66            android:exported="false" />
+66-->C:\Users\Vishnu\flowsense andriod\app\src\main\AndroidManifest.xml:33:47-71
+67        <activity
+67-->C:\Users\Vishnu\flowsense andriod\app\src\main\AndroidManifest.xml:34:9-78
+68            android:name="com.flowsense.app.PredictActivity"
+68-->C:\Users\Vishnu\flowsense andriod\app\src\main\AndroidManifest.xml:34:19-50
+69            android:exported="false" />
+69-->C:\Users\Vishnu\flowsense andriod\app\src\main\AndroidManifest.xml:34:51-75
+70        <activity
+70-->C:\Users\Vishnu\flowsense andriod\app\src\main\AndroidManifest.xml:35:9-82
+71            android:name="com.flowsense.app.OrgAddVideoActivity"
+71-->C:\Users\Vishnu\flowsense andriod\app\src\main\AndroidManifest.xml:35:19-54
+72            android:exported="false" />
+72-->C:\Users\Vishnu\flowsense andriod\app\src\main\AndroidManifest.xml:35:55-79
+73        <activity
+73-->C:\Users\Vishnu\flowsense andriod\app\src\main\AndroidManifest.xml:36:9-83
+74            android:name="com.flowsense.app.LiveAnalysisActivity"
+74-->C:\Users\Vishnu\flowsense andriod\app\src\main\AndroidManifest.xml:36:19-55
+75            android:exported="false" />
+75-->C:\Users\Vishnu\flowsense andriod\app\src\main\AndroidManifest.xml:36:56-80
+76        <activity
+76-->C:\Users\Vishnu\flowsense andriod\app\src\main\AndroidManifest.xml:37:9-78
+77            android:name="com.flowsense.app.OrgCctvActivity"
+77-->C:\Users\Vishnu\flowsense andriod\app\src\main\AndroidManifest.xml:37:19-50
+78            android:exported="false" />
+78-->C:\Users\Vishnu\flowsense andriod\app\src\main\AndroidManifest.xml:37:51-75
+79        <activity
+79-->C:\Users\Vishnu\flowsense andriod\app\src\main\AndroidManifest.xml:38:9-82
+80            android:name="com.flowsense.app.OrgSettingsActivity"
+80-->C:\Users\Vishnu\flowsense andriod\app\src\main\AndroidManifest.xml:38:19-54
+81            android:exported="false" />
+81-->C:\Users\Vishnu\flowsense andriod\app\src\main\AndroidManifest.xml:38:55-79
+82        <activity
+82-->C:\Users\Vishnu\flowsense andriod\app\src\main\AndroidManifest.xml:39:9-85
+83            android:name="com.flowsense.app.AnalysisDetailActivity"
+83-->C:\Users\Vishnu\flowsense andriod\app\src\main\AndroidManifest.xml:39:19-57
+84            android:exported="false" />
+84-->C:\Users\Vishnu\flowsense andriod\app\src\main\AndroidManifest.xml:39:58-82
+85        <activity
+85-->C:\Users\Vishnu\flowsense andriod\app\src\main\AndroidManifest.xml:40:9-83
+86            android:name="com.flowsense.app.UserSettingsActivity"
+86-->C:\Users\Vishnu\flowsense andriod\app\src\main\AndroidManifest.xml:40:19-55
+87            android:exported="false" />
+87-->C:\Users\Vishnu\flowsense andriod\app\src\main\AndroidManifest.xml:40:56-80
+88        <activity
+88-->C:\Users\Vishnu\flowsense andriod\app\src\main\AndroidManifest.xml:41:9-85
+89            android:name="com.flowsense.app.ProfileDetailsActivity"
+89-->C:\Users\Vishnu\flowsense andriod\app\src\main\AndroidManifest.xml:41:19-57
+90            android:exported="false" />
+90-->C:\Users\Vishnu\flowsense andriod\app\src\main\AndroidManifest.xml:41:58-82
+91        <activity
+91-->C:\Users\Vishnu\flowsense andriod\app\src\main\AndroidManifest.xml:42:9-78
+92            android:name="com.flowsense.app.PrivacyActivity"
+92-->C:\Users\Vishnu\flowsense andriod\app\src\main\AndroidManifest.xml:42:19-50
+93            android:exported="false" />
+93-->C:\Users\Vishnu\flowsense andriod\app\src\main\AndroidManifest.xml:42:51-75
+94        <activity
+94-->C:\Users\Vishnu\flowsense andriod\app\src\main\AndroidManifest.xml:43:9-85
+95            android:name="com.flowsense.app.ChangePasswordActivity"
+95-->C:\Users\Vishnu\flowsense andriod\app\src\main\AndroidManifest.xml:43:19-57
+96            android:exported="false" />
+96-->C:\Users\Vishnu\flowsense andriod\app\src\main\AndroidManifest.xml:43:58-82
+97        <activity
+97-->C:\Users\Vishnu\flowsense andriod\app\src\main\AndroidManifest.xml:44:9-75
+98            android:name="com.flowsense.app.HelpActivity"
+98-->C:\Users\Vishnu\flowsense andriod\app\src\main\AndroidManifest.xml:44:19-47
+99            android:exported="false" />
+99-->C:\Users\Vishnu\flowsense andriod\app\src\main\AndroidManifest.xml:44:48-72
+100        <activity
+100-->C:\Users\Vishnu\flowsense andriod\app\src\main\AndroidManifest.xml:45:9-88
+101            android:name="com.flowsense.app.OrgProfileDetailsActivity"
+101-->C:\Users\Vishnu\flowsense andriod\app\src\main\AndroidManifest.xml:45:19-60
+102            android:exported="false" />
+102-->C:\Users\Vishnu\flowsense andriod\app\src\main\AndroidManifest.xml:45:61-85
+103        <activity
+103-->C:\Users\Vishnu\flowsense andriod\app\src\main\AndroidManifest.xml:46:9-88
+104            android:name="com.flowsense.app.OrgChangePasswordActivity"
+104-->C:\Users\Vishnu\flowsense andriod\app\src\main\AndroidManifest.xml:46:19-60
+105            android:exported="false" />
+105-->C:\Users\Vishnu\flowsense andriod\app\src\main\AndroidManifest.xml:46:61-85
+106
+107        <provider
+107-->[androidx.emoji2:emoji2:1.2.0] D:\.gradle\caches\transforms-4\9896ee5107572ec968905e67652dd445\transformed\emoji2-1.2.0\AndroidManifest.xml:24:9-32:20
+108            android:name="androidx.startup.InitializationProvider"
+108-->[androidx.emoji2:emoji2:1.2.0] D:\.gradle\caches\transforms-4\9896ee5107572ec968905e67652dd445\transformed\emoji2-1.2.0\AndroidManifest.xml:25:13-67
+109            android:authorities="com.flowsense.app.androidx-startup"
+109-->[androidx.emoji2:emoji2:1.2.0] D:\.gradle\caches\transforms-4\9896ee5107572ec968905e67652dd445\transformed\emoji2-1.2.0\AndroidManifest.xml:26:13-68
+110            android:exported="false" >
+110-->[androidx.emoji2:emoji2:1.2.0] D:\.gradle\caches\transforms-4\9896ee5107572ec968905e67652dd445\transformed\emoji2-1.2.0\AndroidManifest.xml:27:13-37
+111            <meta-data
+111-->[androidx.emoji2:emoji2:1.2.0] D:\.gradle\caches\transforms-4\9896ee5107572ec968905e67652dd445\transformed\emoji2-1.2.0\AndroidManifest.xml:29:13-31:52
+112                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+112-->[androidx.emoji2:emoji2:1.2.0] D:\.gradle\caches\transforms-4\9896ee5107572ec968905e67652dd445\transformed\emoji2-1.2.0\AndroidManifest.xml:30:17-75
+113                android:value="androidx.startup" />
+113-->[androidx.emoji2:emoji2:1.2.0] D:\.gradle\caches\transforms-4\9896ee5107572ec968905e67652dd445\transformed\emoji2-1.2.0\AndroidManifest.xml:31:17-49
+114            <meta-data
+114-->[androidx.lifecycle:lifecycle-process:2.6.1] D:\.gradle\caches\transforms-4\27722577af32b2bcaff1abc8d60397ac\transformed\lifecycle-process-2.6.1\AndroidManifest.xml:29:13-31:52
+115                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+115-->[androidx.lifecycle:lifecycle-process:2.6.1] D:\.gradle\caches\transforms-4\27722577af32b2bcaff1abc8d60397ac\transformed\lifecycle-process-2.6.1\AndroidManifest.xml:30:17-78
+116                android:value="androidx.startup" />
+116-->[androidx.lifecycle:lifecycle-process:2.6.1] D:\.gradle\caches\transforms-4\27722577af32b2bcaff1abc8d60397ac\transformed\lifecycle-process-2.6.1\AndroidManifest.xml:31:17-49
+117            <meta-data
+117-->[androidx.profileinstaller:profileinstaller:1.3.0] D:\.gradle\caches\transforms-4\52585072cbfbe3c00aa3c177da234442\transformed\profileinstaller-1.3.0\AndroidManifest.xml:29:13-31:52
+118                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+118-->[androidx.profileinstaller:profileinstaller:1.3.0] D:\.gradle\caches\transforms-4\52585072cbfbe3c00aa3c177da234442\transformed\profileinstaller-1.3.0\AndroidManifest.xml:30:17-85
+119                android:value="androidx.startup" />
+119-->[androidx.profileinstaller:profileinstaller:1.3.0] D:\.gradle\caches\transforms-4\52585072cbfbe3c00aa3c177da234442\transformed\profileinstaller-1.3.0\AndroidManifest.xml:31:17-49
+120        </provider>
+121
+122        <receiver
+122-->[androidx.profileinstaller:profileinstaller:1.3.0] D:\.gradle\caches\transforms-4\52585072cbfbe3c00aa3c177da234442\transformed\profileinstaller-1.3.0\AndroidManifest.xml:34:9-52:20
+123            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+123-->[androidx.profileinstaller:profileinstaller:1.3.0] D:\.gradle\caches\transforms-4\52585072cbfbe3c00aa3c177da234442\transformed\profileinstaller-1.3.0\AndroidManifest.xml:35:13-76
+124            android:directBootAware="false"
+124-->[androidx.profileinstaller:profileinstaller:1.3.0] D:\.gradle\caches\transforms-4\52585072cbfbe3c00aa3c177da234442\transformed\profileinstaller-1.3.0\AndroidManifest.xml:36:13-44
+125            android:enabled="true"
+125-->[androidx.profileinstaller:profileinstaller:1.3.0] D:\.gradle\caches\transforms-4\52585072cbfbe3c00aa3c177da234442\transformed\profileinstaller-1.3.0\AndroidManifest.xml:37:13-35
+126            android:exported="true"
+126-->[androidx.profileinstaller:profileinstaller:1.3.0] D:\.gradle\caches\transforms-4\52585072cbfbe3c00aa3c177da234442\transformed\profileinstaller-1.3.0\AndroidManifest.xml:38:13-36
+127            android:permission="android.permission.DUMP" >
+127-->[androidx.profileinstaller:profileinstaller:1.3.0] D:\.gradle\caches\transforms-4\52585072cbfbe3c00aa3c177da234442\transformed\profileinstaller-1.3.0\AndroidManifest.xml:39:13-57
+128            <intent-filter>
+128-->[androidx.profileinstaller:profileinstaller:1.3.0] D:\.gradle\caches\transforms-4\52585072cbfbe3c00aa3c177da234442\transformed\profileinstaller-1.3.0\AndroidManifest.xml:40:13-42:29
+129                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
+129-->[androidx.profileinstaller:profileinstaller:1.3.0] D:\.gradle\caches\transforms-4\52585072cbfbe3c00aa3c177da234442\transformed\profileinstaller-1.3.0\AndroidManifest.xml:41:17-91
+129-->[androidx.profileinstaller:profileinstaller:1.3.0] D:\.gradle\caches\transforms-4\52585072cbfbe3c00aa3c177da234442\transformed\profileinstaller-1.3.0\AndroidManifest.xml:41:25-88
+130            </intent-filter>
+131            <intent-filter>
+131-->[androidx.profileinstaller:profileinstaller:1.3.0] D:\.gradle\caches\transforms-4\52585072cbfbe3c00aa3c177da234442\transformed\profileinstaller-1.3.0\AndroidManifest.xml:43:13-45:29
+132                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
+132-->[androidx.profileinstaller:profileinstaller:1.3.0] D:\.gradle\caches\transforms-4\52585072cbfbe3c00aa3c177da234442\transformed\profileinstaller-1.3.0\AndroidManifest.xml:44:17-85
+132-->[androidx.profileinstaller:profileinstaller:1.3.0] D:\.gradle\caches\transforms-4\52585072cbfbe3c00aa3c177da234442\transformed\profileinstaller-1.3.0\AndroidManifest.xml:44:25-82
+133            </intent-filter>
+134            <intent-filter>
+134-->[androidx.profileinstaller:profileinstaller:1.3.0] D:\.gradle\caches\transforms-4\52585072cbfbe3c00aa3c177da234442\transformed\profileinstaller-1.3.0\AndroidManifest.xml:46:13-48:29
+135                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
+135-->[androidx.profileinstaller:profileinstaller:1.3.0] D:\.gradle\caches\transforms-4\52585072cbfbe3c00aa3c177da234442\transformed\profileinstaller-1.3.0\AndroidManifest.xml:47:17-88
+135-->[androidx.profileinstaller:profileinstaller:1.3.0] D:\.gradle\caches\transforms-4\52585072cbfbe3c00aa3c177da234442\transformed\profileinstaller-1.3.0\AndroidManifest.xml:47:25-85
+136            </intent-filter>
+137            <intent-filter>
+137-->[androidx.profileinstaller:profileinstaller:1.3.0] D:\.gradle\caches\transforms-4\52585072cbfbe3c00aa3c177da234442\transformed\profileinstaller-1.3.0\AndroidManifest.xml:49:13-51:29
+138                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
+138-->[androidx.profileinstaller:profileinstaller:1.3.0] D:\.gradle\caches\transforms-4\52585072cbfbe3c00aa3c177da234442\transformed\profileinstaller-1.3.0\AndroidManifest.xml:50:17-95
+138-->[androidx.profileinstaller:profileinstaller:1.3.0] D:\.gradle\caches\transforms-4\52585072cbfbe3c00aa3c177da234442\transformed\profileinstaller-1.3.0\AndroidManifest.xml:50:25-92
+139            </intent-filter>
+140        </receiver>
+141    </application>
+142
+143</manifest>

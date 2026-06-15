@@ -1,0 +1,34 @@
+com.flowsense.app-pngs-0 C:\Users\Vishnu\flowsense andriod\app\build\generated\res\pngs\debug
+com.flowsense.app-resValues-1 C:\Users\Vishnu\flowsense andriod\app\build\generated\res\resValues\debug
+com.flowsense.app-packageDebugResources-2 C:\Users\Vishnu\flowsense andriod\app\build\intermediates\incremental\debug\packageDebugResources\merged.dir
+com.flowsense.app-packageDebugResources-3 C:\Users\Vishnu\flowsense andriod\app\build\intermediates\incremental\debug\packageDebugResources\stripped.dir
+com.flowsense.app-merged_res-4 C:\Users\Vishnu\flowsense andriod\app\build\intermediates\merged_res\debug
+com.flowsense.app-debug-5 C:\Users\Vishnu\flowsense andriod\app\src\debug\res
+com.flowsense.app-main-6 C:\Users\Vishnu\flowsense andriod\app\src\main\res
+com.flowsense.app-appcompat-resources-1.6.1-7 D:\.gradle\caches\transforms-4\17ca4638154f11311d34352e0baf76c1\transformed\appcompat-resources-1.6.1\res
+com.flowsense.app-lifecycle-process-2.6.1-8 D:\.gradle\caches\transforms-4\27722577af32b2bcaff1abc8d60397ac\transformed\lifecycle-process-2.6.1\res
+com.flowsense.app-core-runtime-2.2.0-9 D:\.gradle\caches\transforms-4\3338d6b4fee21bba5ad47afb133cc7d9\transformed\core-runtime-2.2.0\res
+com.flowsense.app-core-1.12.0-10 D:\.gradle\caches\transforms-4\3555df434f7f40e1d6f496f611850ab3\transformed\core-1.12.0\res
+com.flowsense.app-lifecycle-livedata-core-2.6.1-11 D:\.gradle\caches\transforms-4\35bb0a3d21750d88fbc8ffb13ec8311f\transformed\lifecycle-livedata-core-2.6.1\res
+com.flowsense.app-fragment-1.3.6-12 D:\.gradle\caches\transforms-4\37b3964aa441656771b0576192801c40\transformed\fragment-1.3.6\res
+com.flowsense.app-profileinstaller-1.3.0-13 D:\.gradle\caches\transforms-4\52585072cbfbe3c00aa3c177da234442\transformed\profileinstaller-1.3.0\res
+com.flowsense.app-lifecycle-viewmodel-savedstate-2.6.1-14 D:\.gradle\caches\transforms-4\5bf7cf46bbde6ff5bfd8df6eb83339cf\transformed\lifecycle-viewmodel-savedstate-2.6.1\res
+com.flowsense.app-core-ktx-1.12.0-15 D:\.gradle\caches\transforms-4\5e78136bff418aba4688cbd3409b766a\transformed\core-ktx-1.12.0\res
+com.flowsense.app-lifecycle-runtime-2.6.1-16 D:\.gradle\caches\transforms-4\67fe7b07575bf4595b7ccbeb9d07b973\transformed\lifecycle-runtime-2.6.1\res
+com.flowsense.app-activity-1.8.0-17 D:\.gradle\caches\transforms-4\6a147d95f28b9cc98578413a8ca6fd86\transformed\activity-1.8.0\res
+com.flowsense.app-material-1.11.0-18 D:\.gradle\caches\transforms-4\7c7b5f3c4833508e5944fc8e9c9368a5\transformed\material-1.11.0\res
+com.flowsense.app-constraintlayout-2.1.4-19 D:\.gradle\caches\transforms-4\7e18b06656a5abdd0d2a71ec8bc4ed9e\transformed\constraintlayout-2.1.4\res
+com.flowsense.app-coordinatorlayout-1.1.0-20 D:\.gradle\caches\transforms-4\8932878954dc070ef08c1e6125a8479d\transformed\coordinatorlayout-1.1.0\res
+com.flowsense.app-emoji2-1.2.0-21 D:\.gradle\caches\transforms-4\9896ee5107572ec968905e67652dd445\transformed\emoji2-1.2.0\res
+com.flowsense.app-appcompat-1.6.1-22 D:\.gradle\caches\transforms-4\9a8d804a08a09c3906cef5caa1ce20bd\transformed\appcompat-1.6.1\res
+com.flowsense.app-savedstate-1.2.1-23 D:\.gradle\caches\transforms-4\a4a20491c1945c681801ee0581ca69bb\transformed\savedstate-1.2.1\res
+com.flowsense.app-transition-1.2.0-24 D:\.gradle\caches\transforms-4\a89aeb83bea41eaf3b8188e70b7da821\transformed\transition-1.2.0\res
+com.flowsense.app-emoji2-views-helper-1.2.0-25 D:\.gradle\caches\transforms-4\aadb34ca2da53c156709a39893f7082b\transformed\emoji2-views-helper-1.2.0\res
+com.flowsense.app-viewpager2-1.0.0-26 D:\.gradle\caches\transforms-4\ab9920eac13ae97fff76e871d63548db\transformed\viewpager2-1.0.0\res
+com.flowsense.app-recyclerview-1.1.0-27 D:\.gradle\caches\transforms-4\cc5313b1a71f6ef1c04bd93490d3f90c\transformed\recyclerview-1.1.0\res
+com.flowsense.app-annotation-experimental-1.3.0-28 D:\.gradle\caches\transforms-4\db3e34da4063119521564008530a8c6c\transformed\annotation-experimental-1.3.0\res
+com.flowsense.app-lifecycle-livedata-2.6.1-29 D:\.gradle\caches\transforms-4\e881231175d93935a018b04e755dc677\transformed\lifecycle-livedata-2.6.1\res
+com.flowsense.app-startup-runtime-1.1.1-30 D:\.gradle\caches\transforms-4\ece92bd3ebc7a534260659439046c579\transformed\startup-runtime-1.1.1\res
+com.flowsense.app-lifecycle-viewmodel-2.6.1-31 D:\.gradle\caches\transforms-4\f0eab3146030578ecac21fa6c5b5c2fe\transformed\lifecycle-viewmodel-2.6.1\res
+com.flowsense.app-drawerlayout-1.1.1-32 D:\.gradle\caches\transforms-4\f61a9342aeb95abfcff60a95849f22e3\transformed\drawerlayout-1.1.1\res
+com.flowsense.app-cardview-1.0.0-33 D:\.gradle\caches\transforms-4\fc5edaa6a63d21def2180f22507f6920\transformed\cardview-1.0.0\res

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.flowsense.app">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:label="FlowSense AI"
+        android:supportsRtl="true"
+        android:usesCleartextTraffic="true"
+        android:theme="@style/Theme.AppCompat.DayNight.NoActionBar">
+        
+        <activity
+            android:name=".SplashActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".OnboardingActivity" android:exported="false" />
+        <activity android:name=".RoleSelectionActivity" android:exported="false" />
+        <activity android:name=".LoginOrgActivity" android:exported="false" />
+        <activity android:name=".SignupOrgActivity" android:exported="false" />
+        <activity android:name=".LoginUserActivity" android:exported="false" />
+        <activity android:name=".SignupUserActivity" android:exported="false" />
+        <activity android:name=".UserDashboardActivity" android:exported="false" />
+        <activity android:name=".MonitorActivity" android:exported="false" />
+        <activity android:name=".MapActivity" android:exported="false" />
+        <activity android:name=".PredictActivity" android:exported="false" />
+        <activity android:name=".OrgAddVideoActivity" android:exported="false" />
+        <activity android:name=".LiveAnalysisActivity" android:exported="false" />
+        <activity android:name=".OrgCctvActivity" android:exported="false" />
+        <activity android:name=".OrgSettingsActivity" android:exported="false" />
+        <activity android:name=".AnalysisDetailActivity" android:exported="false" />
+        <activity android:name=".UserSettingsActivity" android:exported="false" />
+        <activity android:name=".ProfileDetailsActivity" android:exported="false" />
+        <activity android:name=".PrivacyActivity" android:exported="false" />
+        <activity android:name=".ChangePasswordActivity" android:exported="false" />
+        <activity android:name=".HelpActivity" android:exported="false" />
+        <activity android:name=".OrgProfileDetailsActivity" android:exported="false" />
+        <activity android:name=".OrgChangePasswordActivity" android:exported="false" />
+    </application>
+
+</manifest>

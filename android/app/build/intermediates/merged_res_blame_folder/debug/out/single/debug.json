@@ -1,0 +1,330 @@
+[
+    {
+        "merged": "D:\\.gradle\\daemon\\8.7\\com.flowsense.app-merged_res-4:\\drawable_ic_filter.xml.flat",
+        "source": "D:\\.gradle\\daemon\\8.7\\com.flowsense.app-main-6:\\drawable\\ic_filter.xml"
+    },
+    {
+        "merged": "D:\\.gradle\\daemon\\8.7\\com.flowsense.app-merged_res-4:\\drawable_bg_recommendation.xml.flat",
+        "source": "D:\\.gradle\\daemon\\8.7\\com.flowsense.app-main-6:\\drawable\\bg_recommendation.xml"
+    },
+    {
+        "merged": "D:\\.gradle\\daemon\\8.7\\com.flowsense.app-merged_res-4:\\layout_activity_predict.xml.flat",
+        "source": "D:\\.gradle\\daemon\\8.7\\com.flowsense.app-main-6:\\layout\\activity_predict.xml"
+    },
+    {
+        "merged": "D:\\.gradle\\daemon\\8.7\\com.flowsense.app-merged_res-4:\\drawable_ic_notification.xml.flat",
+        "source": "D:\\.gradle\\daemon\\8.7\\com.flowsense.app-main-6:\\drawable\\ic_notification.xml"
+    },
+    {
+        "merged": "D:\\.gradle\\daemon\\8.7\\com.flowsense.app-merged_res-4:\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "D:\\.gradle\\daemon\\8.7\\com.flowsense.app-main-6:\\mipmap-anydpi-v26\\ic_launcher_round.xml"
+    },
+    {
+        "merged": "D:\\.gradle\\daemon\\8.7\\com.flowsense.app-merged_res-4:\\layout_activity_signup_org.xml.flat",
+        "source": "D:\\.gradle\\daemon\\8.7\\com.flowsense.app-main-6:\\layout\\activity_signup_org.xml"
+    },
+    {
+        "merged": "D:\\.gradle\\daemon\\8.7\\com.flowsense.app-merged_res-4:\\drawable_ic_pulse_logo.xml.flat",
+        "source": "D:\\.gradle\\daemon\\8.7\\com.flowsense.app-main-6:\\drawable\\ic_pulse_logo.xml"
+    },
+    {
+        "merged": "D:\\.gradle\\daemon\\8.7\\com.flowsense.app-merged_res-4:\\drawable_bg_icon_org.xml.flat",
+        "source": "D:\\.gradle\\daemon\\8.7\\com.flowsense.app-main-6:\\drawable\\bg_icon_org.xml"
+    },
+    {
+        "merged": "D:\\.gradle\\daemon\\8.7\\com.flowsense.app-merged_res-4:\\drawable_ic_eye.xml.flat",
+        "source": "D:\\.gradle\\daemon\\8.7\\com.flowsense.app-main-6:\\drawable\\ic_eye.xml"
+    },
+    {
+        "merged": "D:\\.gradle\\daemon\\8.7\\com.flowsense.app-merged_res-4:\\layout_activity_privacy.xml.flat",
+        "source": "D:\\.gradle\\daemon\\8.7\\com.flowsense.app-main-6:\\layout\\activity_privacy.xml"
+    },
+    {
+        "merged": "D:\\.gradle\\daemon\\8.7\\com.flowsense.app-merged_res-4:\\layout_activity_map.xml.flat",
+        "source": "D:\\.gradle\\daemon\\8.7\\com.flowsense.app-main-6:\\layout\\activity_map.xml"
+    },
+    {
+        "merged": "D:\\.gradle\\daemon\\8.7\\com.flowsense.app-merged_res-4:\\drawable_ic_shield.xml.flat",
+        "source": "D:\\.gradle\\daemon\\8.7\\com.flowsense.app-main-6:\\drawable\\ic_shield.xml"
+    },
+    {
+        "merged": "D:\\.gradle\\daemon\\8.7\\com.flowsense.app-merged_res-4:\\drawable_bg_floating_element.xml.flat",
+        "source": "D:\\.gradle\\daemon\\8.7\\com.flowsense.app-main-6:\\drawable\\bg_floating_element.xml"
+    },
+    {
+        "merged": "D:\\.gradle\\daemon\\8.7\\com.flowsense.app-merged_res-4:\\layout_activity_change_password.xml.flat",
+        "source": "D:\\.gradle\\daemon\\8.7\\com.flowsense.app-main-6:\\layout\\activity_change_password.xml"
+    },
+    {
+        "merged": "D:\\.gradle\\daemon\\8.7\\com.flowsense.app-merged_res-4:\\drawable_ic_settings.xml.flat",
+        "source": "D:\\.gradle\\daemon\\8.7\\com.flowsense.app-main-6:\\drawable\\ic_settings.xml"
+    },
+    {
+        "merged": "D:\\.gradle\\daemon\\8.7\\com.flowsense.app-merged_res-4:\\layout_activity_live_analysis.xml.flat",
+        "source": "D:\\.gradle\\daemon\\8.7\\com.flowsense.app-main-6:\\layout\\activity_live_analysis.xml"
+    },
+    {
+        "merged": "D:\\.gradle\\daemon\\8.7\\com.flowsense.app-merged_res-4:\\drawable_dot_active.xml.flat",
+        "source": "D:\\.gradle\\daemon\\8.7\\com.flowsense.app-main-6:\\drawable\\dot_active.xml"
+    },
+    {
+        "merged": "D:\\.gradle\\daemon\\8.7\\com.flowsense.app-merged_res-4:\\layout_activity_help.xml.flat",
+        "source": "D:\\.gradle\\daemon\\8.7\\com.flowsense.app-main-6:\\layout\\activity_help.xml"
+    },
+    {
+        "merged": "D:\\.gradle\\daemon\\8.7\\com.flowsense.app-merged_res-4:\\drawable_ic_camera.xml.flat",
+        "source": "D:\\.gradle\\daemon\\8.7\\com.flowsense.app-main-6:\\drawable\\ic_camera.xml"
+    },
+    {
+        "merged": "D:\\.gradle\\daemon\\8.7\\com.flowsense.app-merged_res-4:\\drawable_ic_monitor.xml.flat",
+        "source": "D:\\.gradle\\daemon\\8.7\\com.flowsense.app-main-6:\\drawable\\ic_monitor.xml"
+    },
+    {
+        "merged": "D:\\.gradle\\daemon\\8.7\\com.flowsense.app-merged_res-4:\\layout_activity_user_dashboard.xml.flat",
+        "source": "D:\\.gradle\\daemon\\8.7\\com.flowsense.app-main-6:\\layout\\activity_user_dashboard.xml"
+    },
+    {
+        "merged": "D:\\.gradle\\daemon\\8.7\\com.flowsense.app-merged_res-4:\\drawable_bg_main_circle.xml.flat",
+        "source": "D:\\.gradle\\daemon\\8.7\\com.flowsense.app-main-6:\\drawable\\bg_main_circle.xml"
+    },
+    {
+        "merged": "D:\\.gradle\\daemon\\8.7\\com.flowsense.app-merged_res-4:\\drawable_bg_bottom_gradient.xml.flat",
+        "source": "D:\\.gradle\\daemon\\8.7\\com.flowsense.app-main-6:\\drawable\\bg_bottom_gradient.xml"
+    },
+    {
+        "merged": "D:\\.gradle\\daemon\\8.7\\com.flowsense.app-merged_res-4:\\layout_item_feed_card.xml.flat",
+        "source": "D:\\.gradle\\daemon\\8.7\\com.flowsense.app-main-6:\\layout\\item_feed_card.xml"
+    },
+    {
+        "merged": "D:\\.gradle\\daemon\\8.7\\com.flowsense.app-merged_res-4:\\layout_activity_role_selection.xml.flat",
+        "source": "D:\\.gradle\\daemon\\8.7\\com.flowsense.app-main-6:\\layout\\activity_role_selection.xml"
+    },
+    {
+        "merged": "D:\\.gradle\\daemon\\8.7\\com.flowsense.app-merged_res-4:\\drawable_ic_launcher_background.xml.flat",
+        "source": "D:\\.gradle\\daemon\\8.7\\com.flowsense.app-main-6:\\drawable\\ic_launcher_background.xml"
+    },
+    {
+        "merged": "D:\\.gradle\\daemon\\8.7\\com.flowsense.app-merged_res-4:\\drawable_logo_bg.xml.flat",
+        "source": "D:\\.gradle\\daemon\\8.7\\com.flowsense.app-main-6:\\drawable\\logo_bg.xml"
+    },
+    {
+        "merged": "D:\\.gradle\\daemon\\8.7\\com.flowsense.app-merged_res-4:\\drawable_bg_progress_density.xml.flat",
+        "source": "D:\\.gradle\\daemon\\8.7\\com.flowsense.app-main-6:\\drawable\\bg_progress_density.xml"
+    },
+    {
+        "merged": "D:\\.gradle\\daemon\\8.7\\com.flowsense.app-merged_res-4:\\drawable_bg_bounding_box.xml.flat",
+        "source": "D:\\.gradle\\daemon\\8.7\\com.flowsense.app-main-6:\\drawable\\bg_bounding_box.xml"
+    },
+    {
+        "merged": "D:\\.gradle\\daemon\\8.7\\com.flowsense.app-merged_res-4:\\layout_item_onboarding.xml.flat",
+        "source": "D:\\.gradle\\daemon\\8.7\\com.flowsense.app-main-6:\\layout\\item_onboarding.xml"
+    },
+    {
+        "merged": "D:\\.gradle\\daemon\\8.7\\com.flowsense.app-merged_res-4:\\drawable_bg_input_field.xml.flat",
+        "source": "D:\\.gradle\\daemon\\8.7\\com.flowsense.app-main-6:\\drawable\\bg_input_field.xml"
+    },
+    {
+        "merged": "D:\\.gradle\\daemon\\8.7\\com.flowsense.app-merged_res-4:\\layout_activity_analysis_detail.xml.flat",
+        "source": "D:\\.gradle\\daemon\\8.7\\com.flowsense.app-main-6:\\layout\\activity_analysis_detail.xml"
+    },
+    {
+        "merged": "D:\\.gradle\\daemon\\8.7\\com.flowsense.app-merged_res-4:\\drawable_ic_search.xml.flat",
+        "source": "D:\\.gradle\\daemon\\8.7\\com.flowsense.app-main-6:\\drawable\\ic_search.xml"
+    },
+    {
+        "merged": "D:\\.gradle\\daemon\\8.7\\com.flowsense.app-merged_res-4:\\drawable_splash_bg.xml.flat",
+        "source": "D:\\.gradle\\daemon\\8.7\\com.flowsense.app-main-6:\\drawable\\splash_bg.xml"
+    },
+    {
+        "merged": "D:\\.gradle\\daemon\\8.7\\com.flowsense.app-merged_res-4:\\layout_activity_login_user.xml.flat",
+        "source": "D:\\.gradle\\daemon\\8.7\\com.flowsense.app-main-6:\\layout\\activity_login_user.xml"
+    },
+    {
+        "merged": "D:\\.gradle\\daemon\\8.7\\com.flowsense.app-merged_res-4:\\mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "D:\\.gradle\\daemon\\8.7\\com.flowsense.app-main-6:\\mipmap-anydpi-v26\\ic_launcher.xml"
+    },
+    {
+        "merged": "D:\\.gradle\\daemon\\8.7\\com.flowsense.app-merged_res-4:\\drawable_ic_user.xml.flat",
+        "source": "D:\\.gradle\\daemon\\8.7\\com.flowsense.app-main-6:\\drawable\\ic_user.xml"
+    },
+    {
+        "merged": "D:\\.gradle\\daemon\\8.7\\com.flowsense.app-merged_res-4:\\drawable_ic_building.xml.flat",
+        "source": "D:\\.gradle\\daemon\\8.7\\com.flowsense.app-main-6:\\drawable\\ic_building.xml"
+    },
+    {
+        "merged": "D:\\.gradle\\daemon\\8.7\\com.flowsense.app-merged_res-4:\\drawable_bg_role_card.xml.flat",
+        "source": "D:\\.gradle\\daemon\\8.7\\com.flowsense.app-main-6:\\drawable\\bg_role_card.xml"
+    },
+    {
+        "merged": "D:\\.gradle\\daemon\\8.7\\com.flowsense.app-merged_res-4:\\drawable_ic_cctv.xml.flat",
+        "source": "D:\\.gradle\\daemon\\8.7\\com.flowsense.app-main-6:\\drawable\\ic_cctv.xml"
+    },
+    {
+        "merged": "D:\\.gradle\\daemon\\8.7\\com.flowsense.app-merged_res-4:\\layout_activity_org_settings.xml.flat",
+        "source": "D:\\.gradle\\daemon\\8.7\\com.flowsense.app-main-6:\\layout\\activity_org_settings.xml"
+    },
+    {
+        "merged": "D:\\.gradle\\daemon\\8.7\\com.flowsense.app-merged_res-4:\\layout_activity_org_add_video.xml.flat",
+        "source": "D:\\.gradle\\daemon\\8.7\\com.flowsense.app-main-6:\\layout\\activity_org_add_video.xml"
+    },
+    {
+        "merged": "D:\\.gradle\\daemon\\8.7\\com.flowsense.app-merged_res-4:\\layout_activity_onboarding.xml.flat",
+        "source": "D:\\.gradle\\daemon\\8.7\\com.flowsense.app-main-6:\\layout\\activity_onboarding.xml"
+    },
+    {
+        "merged": "D:\\.gradle\\daemon\\8.7\\com.flowsense.app-merged_res-4:\\drawable_ic_map.xml.flat",
+        "source": "D:\\.gradle\\daemon\\8.7\\com.flowsense.app-main-6:\\drawable\\ic_map.xml"
+    },
+    {
+        "merged": "D:\\.gradle\\daemon\\8.7\\com.flowsense.app-merged_res-4:\\layout_activity_login_org.xml.flat",
+        "source": "D:\\.gradle\\daemon\\8.7\\com.flowsense.app-main-6:\\layout\\activity_login_org.xml"
+    },
+    {
+        "merged": "D:\\.gradle\\daemon\\8.7\\com.flowsense.app-merged_res-4:\\drawable_bg_rec_icon.xml.flat",
+        "source": "D:\\.gradle\\daemon\\8.7\\com.flowsense.app-main-6:\\drawable\\bg_rec_icon.xml"
+    },
+    {
+        "merged": "D:\\.gradle\\daemon\\8.7\\com.flowsense.app-merged_res-4:\\drawable_bg_chip.xml.flat",
+        "source": "D:\\.gradle\\daemon\\8.7\\com.flowsense.app-main-6:\\drawable\\bg_chip.xml"
+    },
+    {
+        "merged": "D:\\.gradle\\daemon\\8.7\\com.flowsense.app-merged_res-4:\\drawable_bg_red_dot.xml.flat",
+        "source": "D:\\.gradle\\daemon\\8.7\\com.flowsense.app-main-6:\\drawable\\bg_red_dot.xml"
+    },
+    {
+        "merged": "D:\\.gradle\\daemon\\8.7\\com.flowsense.app-merged_res-4:\\drawable_bg_ai_insight.xml.flat",
+        "source": "D:\\.gradle\\daemon\\8.7\\com.flowsense.app-main-6:\\drawable\\bg_ai_insight.xml"
+    },
+    {
+        "merged": "D:\\.gradle\\daemon\\8.7\\com.flowsense.app-merged_res-4:\\drawable_ic_launcher_foreground.xml.flat",
+        "source": "D:\\.gradle\\daemon\\8.7\\com.flowsense.app-main-6:\\drawable\\ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "D:\\.gradle\\daemon\\8.7\\com.flowsense.app-merged_res-4:\\drawable_ic_people.xml.flat",
+        "source": "D:\\.gradle\\daemon\\8.7\\com.flowsense.app-main-6:\\drawable\\ic_people.xml"
+    },
+    {
+        "merged": "D:\\.gradle\\daemon\\8.7\\com.flowsense.app-merged_res-4:\\drawable_ic_location.xml.flat",
+        "source": "D:\\.gradle\\daemon\\8.7\\com.flowsense.app-main-6:\\drawable\\ic_location.xml"
+    },
+    {
+        "merged": "D:\\.gradle\\daemon\\8.7\\com.flowsense.app-merged_res-4:\\drawable_bg_live_tag.xml.flat",
+        "source": "D:\\.gradle\\daemon\\8.7\\com.flowsense.app-main-6:\\drawable\\bg_live_tag.xml"
+    },
+    {
+        "merged": "com.flowsense.app-merged_res-4:/layout_activity_live_analysis.xml.flat",
+        "source": "com.flowsense.app-main-6:/layout/activity_live_analysis.xml"
+    },
+    {
+        "merged": "D:\\.gradle\\daemon\\8.7\\com.flowsense.app-merged_res-4:\\drawable_bg_chip_inactive.xml.flat",
+        "source": "D:\\.gradle\\daemon\\8.7\\com.flowsense.app-main-6:\\drawable\\bg_chip_inactive.xml"
+    },
+    {
+        "merged": "D:\\.gradle\\daemon\\8.7\\com.flowsense.app-merged_res-4:\\drawable_bg_icon_user.xml.flat",
+        "source": "D:\\.gradle\\daemon\\8.7\\com.flowsense.app-main-6:\\drawable\\bg_icon_user.xml"
+    },
+    {
+        "merged": "D:\\.gradle\\daemon\\8.7\\com.flowsense.app-merged_res-4:\\layout_item_predict.xml.flat",
+        "source": "D:\\.gradle\\daemon\\8.7\\com.flowsense.app-main-6:\\layout\\item_predict.xml"
+    },
+    {
+        "merged": "D:\\.gradle\\daemon\\8.7\\com.flowsense.app-merged_res-4:\\drawable_dot_inactive.xml.flat",
+        "source": "D:\\.gradle\\daemon\\8.7\\com.flowsense.app-main-6:\\drawable\\dot_inactive.xml"
+    },
+    {
+        "merged": "D:\\.gradle\\daemon\\8.7\\com.flowsense.app-merged_res-4:\\drawable_bg_tag_moderate.xml.flat",
+        "source": "D:\\.gradle\\daemon\\8.7\\com.flowsense.app-main-6:\\drawable\\bg_tag_moderate.xml"
+    },
+    {
+        "merged": "D:\\.gradle\\daemon\\8.7\\com.flowsense.app-merged_res-4:\\drawable_ic_predict.xml.flat",
+        "source": "D:\\.gradle\\daemon\\8.7\\com.flowsense.app-main-6:\\drawable\\ic_predict.xml"
+    },
+    {
+        "merged": "D:\\.gradle\\daemon\\8.7\\com.flowsense.app-merged_res-4:\\drawable_ic_back.xml.flat",
+        "source": "D:\\.gradle\\daemon\\8.7\\com.flowsense.app-main-6:\\drawable\\ic_back.xml"
+    },
+    {
+        "merged": "D:\\.gradle\\daemon\\8.7\\com.flowsense.app-merged_res-4:\\layout_activity_profile_details.xml.flat",
+        "source": "D:\\.gradle\\daemon\\8.7\\com.flowsense.app-main-6:\\layout\\activity_profile_details.xml"
+    },
+    {
+        "merged": "D:\\.gradle\\daemon\\8.7\\com.flowsense.app-merged_res-4:\\drawable_ic_arrow_right.xml.flat",
+        "source": "D:\\.gradle\\daemon\\8.7\\com.flowsense.app-main-6:\\drawable\\ic_arrow_right.xml"
+    },
+    {
+        "merged": "D:\\.gradle\\daemon\\8.7\\com.flowsense.app-merged_res-4:\\layout_activity_org_profile_details.xml.flat",
+        "source": "D:\\.gradle\\daemon\\8.7\\com.flowsense.app-main-6:\\layout\\activity_org_profile_details.xml"
+    },
+    {
+        "merged": "D:\\.gradle\\daemon\\8.7\\com.flowsense.app-merged_res-4:\\drawable_bg_chip_active.xml.flat",
+        "source": "D:\\.gradle\\daemon\\8.7\\com.flowsense.app-main-6:\\drawable\\bg_chip_active.xml"
+    },
+    {
+        "merged": "D:\\.gradle\\daemon\\8.7\\com.flowsense.app-merged_res-4:\\drawable_ic_home.xml.flat",
+        "source": "D:\\.gradle\\daemon\\8.7\\com.flowsense.app-main-6:\\drawable\\ic_home.xml"
+    },
+    {
+        "merged": "D:\\.gradle\\daemon\\8.7\\com.flowsense.app-merged_res-4:\\drawable_bg_list_item.xml.flat",
+        "source": "D:\\.gradle\\daemon\\8.7\\com.flowsense.app-main-6:\\drawable\\bg_list_item.xml"
+    },
+    {
+        "merged": "D:\\.gradle\\daemon\\8.7\\com.flowsense.app-merged_res-4:\\layout_item_location_card.xml.flat",
+        "source": "D:\\.gradle\\daemon\\8.7\\com.flowsense.app-main-6:\\layout\\item_location_card.xml"
+    },
+    {
+        "merged": "D:\\.gradle\\daemon\\8.7\\com.flowsense.app-merged_res-4:\\drawable_bg_white_transparent.xml.flat",
+        "source": "D:\\.gradle\\daemon\\8.7\\com.flowsense.app-main-6:\\drawable\\bg_white_transparent.xml"
+    },
+    {
+        "merged": "D:\\.gradle\\daemon\\8.7\\com.flowsense.app-merged_res-4:\\layout_activity_user_settings.xml.flat",
+        "source": "D:\\.gradle\\daemon\\8.7\\com.flowsense.app-main-6:\\layout\\activity_user_settings.xml"
+    },
+    {
+        "merged": "D:\\.gradle\\daemon\\8.7\\com.flowsense.app-merged_res-4:\\drawable_bg_button_gradient.xml.flat",
+        "source": "D:\\.gradle\\daemon\\8.7\\com.flowsense.app-main-6:\\drawable\\bg_button_gradient.xml"
+    },
+    {
+        "merged": "D:\\.gradle\\daemon\\8.7\\com.flowsense.app-merged_res-4:\\drawable_bg_tag_high.xml.flat",
+        "source": "D:\\.gradle\\daemon\\8.7\\com.flowsense.app-main-6:\\drawable\\bg_tag_high.xml"
+    },
+    {
+        "merged": "D:\\.gradle\\daemon\\8.7\\com.flowsense.app-merged_res-4:\\layout_item_org_video.xml.flat",
+        "source": "D:\\.gradle\\daemon\\8.7\\com.flowsense.app-main-6:\\layout\\item_org_video.xml"
+    },
+    {
+        "merged": "D:\\.gradle\\daemon\\8.7\\com.flowsense.app-merged_res-4:\\drawable_bg_card.xml.flat",
+        "source": "D:\\.gradle\\daemon\\8.7\\com.flowsense.app-main-6:\\drawable\\bg_card.xml"
+    },
+    {
+        "merged": "D:\\.gradle\\daemon\\8.7\\com.flowsense.app-merged_res-4:\\layout_activity_org_cctv.xml.flat",
+        "source": "D:\\.gradle\\daemon\\8.7\\com.flowsense.app-main-6:\\layout\\activity_org_cctv.xml"
+    },
+    {
+        "merged": "D:\\.gradle\\daemon\\8.7\\com.flowsense.app-merged_res-4:\\layout_activity_signup_user.xml.flat",
+        "source": "D:\\.gradle\\daemon\\8.7\\com.flowsense.app-main-6:\\layout\\activity_signup_user.xml"
+    },
+    {
+        "merged": "D:\\.gradle\\daemon\\8.7\\com.flowsense.app-merged_res-4:\\drawable_ic_delete.xml.flat",
+        "source": "D:\\.gradle\\daemon\\8.7\\com.flowsense.app-main-6:\\drawable\\ic_delete.xml"
+    },
+    {
+        "merged": "D:\\.gradle\\daemon\\8.7\\com.flowsense.app-merged_res-4:\\drawable_ic_upload.xml.flat",
+        "source": "D:\\.gradle\\daemon\\8.7\\com.flowsense.app-main-6:\\drawable\\ic_upload.xml"
+    },
+    {
+        "merged": "D:\\.gradle\\daemon\\8.7\\com.flowsense.app-merged_res-4:\\drawable_ic_clock.xml.flat",
+        "source": "D:\\.gradle\\daemon\\8.7\\com.flowsense.app-main-6:\\drawable\\ic_clock.xml"
+    },
+    {
+        "merged": "D:\\.gradle\\daemon\\8.7\\com.flowsense.app-merged_res-4:\\layout_activity_monitor.xml.flat",
+        "source": "D:\\.gradle\\daemon\\8.7\\com.flowsense.app-main-6:\\layout\\activity_monitor.xml"
+    },
+    {
+        "merged": "D:\\.gradle\\daemon\\8.7\\com.flowsense.app-merged_res-4:\\layout_activity_splash.xml.flat",
+        "source": "D:\\.gradle\\daemon\\8.7\\com.flowsense.app-main-6:\\layout\\activity_splash.xml"
+    },
+    {
+        "merged": "D:\\.gradle\\daemon\\8.7\\com.flowsense.app-merged_res-4:\\drawable_bg_tag_low.xml.flat",
+        "source": "D:\\.gradle\\daemon\\8.7\\com.flowsense.app-main-6:\\drawable\\bg_tag_low.xml"
+    }
+]

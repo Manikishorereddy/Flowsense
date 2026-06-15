@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.flowsense.app"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="24"
+        android:targetSdkVersion="34" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <permission
+        android:name="com.flowsense.app.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="com.flowsense.app.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+
+    <application
+        android:allowBackup="true"
+        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+        android:debuggable="true"
+        android:extractNativeLibs="false"
+        android:icon="@mipmap/ic_launcher"
+        android:label="FlowSense AI"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:testOnly="true"
+        android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"
+        android:usesCleartextTraffic="true" >
+        <activity
+            android:name="com.flowsense.app.SplashActivity"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.flowsense.app.OnboardingActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.flowsense.app.RoleSelectionActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.flowsense.app.LoginOrgActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.flowsense.app.SignupOrgActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.flowsense.app.LoginUserActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.flowsense.app.SignupUserActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.flowsense.app.UserDashboardActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.flowsense.app.MonitorActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.flowsense.app.MapActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.flowsense.app.PredictActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.flowsense.app.OrgAddVideoActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.flowsense.app.LiveAnalysisActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.flowsense.app.OrgCctvActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.flowsense.app.OrgSettingsActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.flowsense.app.AnalysisDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.flowsense.app.UserSettingsActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.flowsense.app.ProfileDetailsActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.flowsense.app.PrivacyActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.flowsense.app.ChangePasswordActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.flowsense.app.HelpActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.flowsense.app.OrgProfileDetailsActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.flowsense.app.OrgChangePasswordActivity"
+            android:exported="false" />
+
+        <provider
+            android:name="androidx.startup.InitializationProvider"
+            android:authorities="com.flowsense.app.androidx-startup"
+            android:exported="false" >
+            <meta-data
+                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+                android:value="androidx.startup" />
+            <meta-data
+                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+                android:value="androidx.startup" />
+            <meta-data
+                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+                android:value="androidx.startup" />
+        </provider>
+
+        <receiver
+            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+            android:directBootAware="false"
+            android:enabled="true"
+            android:exported="true"
+            android:permission="android.permission.DUMP" >
+            <intent-filter>
+                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
+            </intent-filter>
+        </receiver>
+    </application>
+
+</manifest>
