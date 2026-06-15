@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlowSense AI - Predict</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="stylesheet" href="dashboard.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- Sidebar -->
+        <nav class="sidebar">
+            <div class="sidebar-logo">
+                <div class="logo-icon">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
+                </div>
+                <h2>FlowSense</h2>
+            </div>
+            <div class="nav-menu">
+                <a href="user-home.html" class="nav-item">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+                    <span>Dashboard</span>
+                </a>
+                <a href="monitor.html" class="nav-item">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="2.18" ry="2.18"></rect><line x1="7" y1="2" x2="7" y2="22"></line><line x1="17" y1="2" x2="17" y2="22"></line><line x1="2" y1="12" x2="22" y2="12"></line><line x1="2" y1="7" x2="7" y2="7"></line><line x1="2" y1="17" x2="7" y2="17"></line><line x1="17" y1="17" x2="22" y2="17"></line><line x1="17" y1="7" x2="22" y2="7"></line></svg>
+                    <span>Monitor</span>
+                </a>
+                <a href="predict.html" class="nav-item active">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
+                    <span>Predict</span>
+                </a>
+                <a href="user-settings.html" class="nav-item">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                    <span>Settings</span>
+                </a>
+            </div>
+        </nav>
+
+        <div class="main-content">
+            <header class="top-bar">
+                <div class="logo-area">
+                    <h2>AI Predict</h2>
+                </div>
+
+            </header>
+
+
+            <div id="predictList">
+                <div style="text-align: center; color: #8c92a6; padding: 20px;">Loading predictions...</div>
+            </div>
+
+    </div>
+
+    <script>
+        async function fetchPredicts() {
+            try {
+                const orgId = localStorage.getItem('orgId');
+                const url = orgId ? `http://localhost/flowsense%20backend/api/user/get_feeds.php?org_id=${orgId}` : 'http://localhost/flowsense%20backend/api/user/get_feeds.php';
+                const response = await fetch(url);
+                const result = await response.json();
+                
+                const list = document.getElementById('predictList');
+                list.innerHTML = '';
+                
+                if (result.feeds && result.feeds.length > 0) {
+                    result.feeds.forEach(feed => {
+                        const cardId = 'predict-card-' + feed.id;
+                        list.innerHTML += `
+                            <div class="predict-card" id="${cardId}" onclick="window.location.href='live-analysis.html?video_path=${encodeURIComponent(feed.file_path)}&title=${encodeURIComponent(feed.title + ' of ' + (feed.org_name || 'Organization'))}'" style="cursor:pointer;">
+                                <div class="predict-header">
+                                    <div class="predict-info">
+                                        <h3>${feed.title} of ${feed.org_name || 'Organization'}</h3>
+                                    </div>
+                                </div>
+                                <div class="forecast-time" style="margin-top: 12px; display: flex; justify-content: space-between; background: rgba(255,255,255,0.02); padding: 12px; border-radius: 8px;">
+                                    <span style="color:#8c92a6;">Live Count: <strong id="count-${feed.id}" style="color:#1cb5e0; font-size: 16px;">Loading...</strong></span>
+                                    <span style="color:#8c92a6;">Max Est. Wait: <strong id="wait-${feed.id}" style="color:#ff4b4b; font-size: 16px;">Loading...</strong></span>
+                                </div>
+                            </div>
+                        `;
+                        
+                        const jsonUrl = `http://localhost/flowsense%20backend/api/user/get_analytics.php?path=${encodeURIComponent(feed.file_path)}`;
+                        
+                        function fetchFeedAnalytics() {
+                            fetch(jsonUrl)
+                                .then(res => res.json())
+                                .then(data => {
+                                    if (data && data.length > 0) {
+                                        const sec = Math.floor(Date.now() / 1000) % data.length;
+                                        const currentData = data[sec] || data[0];
+                                        const count = currentData.count;
+                                        
+                                        let maxCount = 0;
+                                        data.forEach(d => { if (d.count > maxCount) maxCount = d.count; });
+                                        const maxWaitTime = maxCount * 3;
+                                        
+                                        const countEl = document.getElementById('count-' + feed.id);
+                                        const waitEl = document.getElementById('wait-' + feed.id);
+                                        if(countEl) countEl.innerText = count;
+                                        if(waitEl) waitEl.innerText = maxWaitTime + ' mins';
+                                    }
+                                })
+                                .catch(err => {
+                                    const countEl = document.getElementById('count-' + feed.id);
+                                    if(countEl && countEl.innerText === 'Loading...') {
+                                        countEl.innerText = 'Unavailable';
+                                        document.getElementById('wait-' + feed.id).innerText = 'Unavailable';
+                                    }
+                                });
+                        }
+                        
+                        fetchFeedAnalytics();
+                        setInterval(fetchFeedAnalytics, 3000);
+                    });
+                } else {
+                    list.innerHTML = '<div style="text-align: center; color: #8c92a6; padding: 20px;">No predictions available.</div>';
+                }
+            } catch (err) {
+                console.error(err);
+            }
+        }
+        
+        fetchPredicts();
+    </script>
+</body>
+</html>

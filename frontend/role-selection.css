@@ -1,0 +1,75 @@
+.role-container {
+    width: 100%;
+    max-width: 400px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    animation: fadeIn 0.6s ease-out;
+}
+.header {
+    text-align: center;
+}
+.header h1 {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+.header p {
+    color: #8c92a6;
+    font-size: 16px;
+}
+.cards-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.role-card {
+    background: #111424;
+    border: 1px solid #2a2c4a;
+    border-radius: 20px;
+    padding: 24px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    text-decoration: none;
+    color: white;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+.role-card:hover {
+    transform: translateY(-4px);
+    border-color: #1cb5e0;
+    box-shadow: 0 10px 24px rgba(28, 181, 224, 0.2);
+}
+.icon-box {
+    width: 56px;
+    height: 56px;
+    background: linear-gradient(135deg, #764ba2 0%, #1cb5e0 100%);
+    border-radius: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.icon-box.user-icon {
+    background: linear-gradient(135deg, #1cb5e0 0%, #764ba2 100%);
+}
+.card-text {
+    flex: 1;
+}
+.card-text h3 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+.card-text p {
+    font-size: 14px;
+    color: #8c92a6;
+}
+.arrow {
+    font-size: 24px;
+    color: #8c92a6;
+}
+.role-card:hover .arrow {
+    color: #1cb5e0;
+}

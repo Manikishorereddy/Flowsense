@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlowSense AI - Organization Login</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="stylesheet" href="auth.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="auth-container">
+        <div class="auth-header">
+            <h1>Organization Login</h1>
+            <p>Welcome back! Please enter your details.</p>
+        </div>
+        
+        <form id="authForm" class="auth-form">
+            <div id="errorMsg" style="color: #ff4b4b; font-size: 14px; margin-bottom: 12px; display: none;"></div>
+            <div class="input-group">
+                <label for="email">Work Email</label>
+                <input type="email" id="email" placeholder="Enter work email" required>
+            </div>
+            <div class="input-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" placeholder="Enter password" required>
+            </div>
+            
+            <button type="submit" class="primary-btn">Login</button>
+        </form>
+
+        <div class="auth-footer">
+            <p>Don't have an account? <a href="signup-org.html">Sign Up</a></p>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('authForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            const errorMsg = document.getElementById('errorMsg');
+            
+            fetch('http://localhost/flowsense%20backend/api/org/login.php', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ email: email, password: password })
+            })
+            .then(res => res.json())
+            .then(data => {
+                if(data.status === 'success') {
+                    localStorage.setItem('orgId', data.id);
+                    localStorage.setItem('orgName', data.org_name);
+                    window.location.href = 'org-add-video.html';
+                } else {
+                    errorMsg.innerText = data.message;
+                    errorMsg.style.display = 'block';
+                }
+            })
+            .catch(err => {
+                errorMsg.innerText = "Connection error. Please try again.";
+                errorMsg.style.display = 'block';
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlowSense AI - Profile Details</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="stylesheet" href="dashboard.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- Sidebar -->
+        <nav class="sidebar">
+            <div class="sidebar-logo">
+                <div class="logo-icon">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
+                </div>
+                <h2>FlowSense</h2>
+            </div>
+            <div class="nav-menu">
+                <a href="user-home.html" class="nav-item">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+                    <span>Dashboard</span>
+                </a>
+                <a href="monitor.html" class="nav-item">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="2.18" ry="2.18"></rect><line x1="7" y1="2" x2="7" y2="22"></line><line x1="17" y1="2" x2="17" y2="22"></line><line x1="2" y1="12" x2="22" y2="12"></line><line x1="2" y1="7" x2="7" y2="7"></line><line x1="2" y1="17" x2="7" y2="17"></line><line x1="17" y1="17" x2="22" y2="17"></line><line x1="17" y1="7" x2="22" y2="7"></line></svg>
+                    <span>Monitor</span>
+                </a>
+                <a href="predict.html" class="nav-item">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
+                    <span>Predict</span>
+                </a>
+                <a href="user-settings.html" class="nav-item active">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                    <span>Settings</span>
+                </a>
+            </div>
+        </nav>
+
+        <div class="main-content">
+            <header class="top-bar">
+                <div class="logo-area">
+                    <h2>Profile</h2>
+                </div>
+            </header>
+
+            <div style="display: flex; flex-direction: column; align-items: center; padding: 40px 20px;">
+                <div style="width: 100px; height: 100px; border-radius: 50%; background: linear-gradient(135deg, #1cb5e0 0%, #000851 100%); display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
+                    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                </div>
+                
+                <h2 style="color: white; font-size: 24px; margin-bottom: 8px;" id="profileName">User Name</h2>
+                <p style="color: #8c92a6; font-size: 16px;" id="profileEmail">email@example.com</p>
+                
+                <div style="margin-top: 40px; width: 100%; max-width: 400px; background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.05); border-radius: 12px; padding: 20px;">
+                    <div style="margin-bottom: 15px;">
+                        <label style="color: #8c92a6; font-size: 12px; text-transform: uppercase; letter-spacing: 1px;">Full Name</label>
+                        <div style="color: white; font-size: 16px; margin-top: 5px;" id="detailsName">User Name</div>
+                    </div>
+                    <div>
+                        <label style="color: #8c92a6; font-size: 12px; text-transform: uppercase; letter-spacing: 1px;">Email Address</label>
+                        <div style="color: white; font-size: 16px; margin-top: 5px;" id="detailsEmail">email@example.com</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            let fullName = localStorage.getItem('fullName');
+            if (!fullName || fullName === 'null' || fullName === 'undefined') fullName = 'User';
+            
+            let email = localStorage.getItem('email');
+            if (!email || email === 'null' || email === 'undefined') email = 'Unknown Email';
+            
+            document.getElementById('profileName').innerText = fullName;
+            document.getElementById('detailsName').innerText = fullName;
+            document.getElementById('profileEmail').innerText = email;
+            document.getElementById('detailsEmail').innerText = email;
+        });
+    </script>
+</body>
+</html>

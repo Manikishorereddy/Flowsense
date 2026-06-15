@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlowSense AI - Live Feeds</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="stylesheet" href="dashboard.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="dashboard-container">
+        
+        <!-- Sidebar -->
+        <nav class="sidebar">
+            <div class="sidebar-logo">
+                <div class="logo-icon">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
+                </div>
+                <h2>FlowSense</h2>
+            </div>
+            <div class="nav-menu">
+                <a href="user-home.html" class="nav-item">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+                    <span>Dashboard</span>
+                </a>
+                <a href="monitor.html" class="nav-item active">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="2.18" ry="2.18"></rect><line x1="7" y1="2" x2="7" y2="22"></line><line x1="17" y1="2" x2="17" y2="22"></line><line x1="2" y1="12" x2="22" y2="12"></line><line x1="2" y1="7" x2="7" y2="7"></line><line x1="2" y1="17" x2="7" y2="17"></line><line x1="17" y1="17" x2="22" y2="17"></line><line x1="17" y1="7" x2="22" y2="7"></line></svg>
+                    <span>Monitor</span>
+                </a>
+                <a href="predict.html" class="nav-item">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
+                    <span>Predict</span>
+                </a>
+                <a href="user-settings.html" class="nav-item">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                    <span>Settings</span>
+                </a>
+            </div>
+        </nav>
+
+        <!-- Scrollable Content -->
+        <div class="main-content">
+            <!-- Header -->
+            <header class="top-bar">
+                <div class="logo-area">
+                    <h2>Live Feeds</h2>
+                </div>
+
+            </header>
+
+            <!-- Stats Row -->
+            <div class="stats-row">
+                <div class="stat-box">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1cb5e0" stroke-width="2"><polygon points="23 7 16 12 23 17 23 7"></polygon><rect x="1" y="5" width="15" height="14" rx="2" ry="2"></rect></svg>
+                    <h3 id="activeCamerasCount">0</h3>
+                    <p>Active Cameras</p>
+                </div>
+            </div>
+
+            <!-- Feed List -->
+            <div class="feed-list" id="feedList">
+                <div style="text-align: center; color: #8c92a6; padding: 20px;">Loading feeds...</div>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        async function fetchFeeds() {
+            try {
+                const orgId = localStorage.getItem('orgId');
+                const url = orgId ? `http://localhost/flowsense%20backend/api/user/get_feeds.php?org_id=${orgId}` : 'http://localhost/flowsense%20backend/api/user/get_feeds.php';
+                const response = await fetch(url);
+                const result = await response.json();
+                
+                const list = document.getElementById('feedList');
+                list.innerHTML = '';
+                
+                if (result.feeds && result.feeds.length > 0) {
+                    document.getElementById('activeCamerasCount').innerText = result.feeds.length;
+                    
+                    let totalTracked = 0;
+                    
+                    result.feeds.forEach((feed, index) => {
+                        const count = Math.floor(Math.random() * 200) + 10;
+                        totalTracked += count;
+                        const density = Math.min(Math.floor((count / 250) * 100), 100);
+                        const isHighDensity = density > 80;
+                        
+                        const colors = ['#2a2c4a', '#1a1b3c', '#201a3c', '#1a2b3c', '#2b1a3c'];
+                        const bgColor = colors[index % colors.length];
+                        
+                        let tagsHtml = `<span class="live-tag"><div class="live-dot"></div> LIVE</span>`;
+                        if (isHighDensity) {
+                            tagsHtml += ` <span class="alert-tag">⚠️ HIGH DENSITY</span>`;
+                        }
+                        
+                        const videoUrl = 'http://localhost/flowsense%20backend/' + feed.file_path.replace(' ', '%20');
+                        list.innerHTML += `
+                            <div class="feed-card" onclick="window.location.href='live-analysis.html?video_path=${encodeURIComponent(feed.file_path)}&title=${encodeURIComponent(feed.title + ' of ' + (feed.org_name || 'Organization'))}'" style="cursor:pointer;">
+                                <div class="feed-image" style="position: relative; overflow: hidden; background: ${bgColor}; min-height: 140px;">
+                                    <video src="${videoUrl}" autoplay loop muted playsinline style="position: absolute; width: 100%; height: 100%; object-fit: cover; top: 0; left: 0; opacity: 0.8;"></video>
+                                    <div class="feed-tags" style="position: relative; z-index: 10;">
+                                        ${tagsHtml}
+                                    </div>
+                                </div>
+                                <div class="feed-info">
+                                    <h3>${feed.title} of ${feed.org_name || 'Organization'}</h3>
+                                    <div class="feed-stats-wrapper" style="justify-content: flex-end; margin-top: 12px;">
+                                        <button class="arrow-btn">
+                                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        `;
+                    });
+                    
+                } else {
+                    document.getElementById('activeCamerasCount').innerText = '0';
+                    list.innerHTML = '<div style="text-align: center; color: #8c92a6; padding: 20px;">No feeds available.</div>';
+                }
+            } catch (err) {
+                console.error(err);
+            }
+        }
+        
+        fetchFeeds();
+    </script>
+</body>
+</html>

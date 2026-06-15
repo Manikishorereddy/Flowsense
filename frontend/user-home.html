@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlowSense AI - Dashboard</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="stylesheet" href="dashboard.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="dashboard-container">
+        
+        <!-- Sidebar -->
+        <nav class="sidebar">
+            <div class="sidebar-logo">
+                <div class="logo-icon">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
+                </div>
+                <h2>FlowSense</h2>
+            </div>
+            <div class="nav-menu">
+                <a href="user-home.html" class="nav-item active">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+                    <span>Dashboard</span>
+                </a>
+                <a href="monitor.html" class="nav-item">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="2.18" ry="2.18"></rect><line x1="7" y1="2" x2="7" y2="22"></line><line x1="17" y1="2" x2="17" y2="22"></line><line x1="2" y1="12" x2="22" y2="12"></line><line x1="2" y1="7" x2="7" y2="7"></line><line x1="2" y1="17" x2="7" y2="17"></line><line x1="17" y1="17" x2="22" y2="17"></line><line x1="17" y1="7" x2="22" y2="7"></line></svg>
+                    <span>Monitor</span>
+                </a>
+                <a href="predict.html" class="nav-item">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
+                    <span>Predict</span>
+                </a>
+                <a href="user-settings.html" class="nav-item">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                    <span>Settings</span>
+                </a>
+            </div>
+        </nav>
+
+        <!-- Scrollable Content -->
+        <div class="main-content">
+            <!-- Header -->
+            <header class="top-bar">
+                <div class="logo-area">
+                    <h2>Dashboard</h2>
+                </div>
+            </header>
+
+            <!-- Removed User Greeting -->
+
+
+
+            <!-- Search Bar -->
+            <div class="search-bar">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#8c92a6" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                <input type="text" placeholder="Search hospitals, banks, offices...">
+                <div class="filter-btn">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#8c92a6" stroke-width="2"><polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"></polygon></svg>
+                </div>
+            </div>
+
+
+
+            <!-- Live Monitoring -->
+            <div class="section-header">
+                <div class="title-with-dot">
+                    <div class="live-dot"></div>
+                    <h2>Live Monitoring</h2>
+                </div>
+                <a href="#" class="see-all">See all</a>
+            </div>
+
+            <div class="monitoring-list" id="monitoringList">
+                <div style="text-align: center; color: #8c92a6; padding: 20px;">Loading feeds...</div>
+            </div>
+        </div>
+
+    </div>
+    
+    <script>
+        async function fetchFeeds() {
+            try {
+                const orgId = localStorage.getItem('orgId');
+                const url = orgId ? `http://localhost/flowsense%20backend/api/user/get_feeds.php?org_id=${orgId}` : 'http://localhost/flowsense%20backend/api/user/get_feeds.php';
+                const response = await fetch(url);
+                const result = await response.json();
+                
+                const list = document.getElementById('monitoringList');
+                list.innerHTML = '';
+                
+                if (result.feeds && result.feeds.length > 0) {
+                    result.feeds.forEach(feed => {
+                        const waitTime = Math.floor(Math.random() * 50) + 5;
+                        const accuracy = Math.floor(Math.random() * 10) + 90;
+                        
+                        list.innerHTML += `
+                            <div class="location-card" onclick="window.location.href='live-analysis.html?video_path=${encodeURIComponent(feed.file_path)}&title=${encodeURIComponent(feed.title + ' of ' + (feed.org_name || 'Organization'))}'" style="cursor:pointer;">
+                                <div class="card-top">
+                                    <div class="info">
+                                        <h3>${feed.title} of ${feed.org_name || 'Organization'}</h3>
+                                        <p>2.4 km away</p>
+                                    </div>
+                                </div>
+                                <div class="card-stats">
+                                    <div class="stat">
+                                        <div class="stat-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#8c92a6" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg></div>
+                                        <div class="stat-text">
+                                            <span>WAIT TIME</span>
+                                            <strong>${waitTime} mins</strong>
+                                        </div>
+                                    </div>
+                                    <div class="stat">
+                                        <div class="stat-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1cb5e0" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg></div>
+                                        <div class="stat-text">
+                                            <span>AI ACCURACY</span>
+                                            <strong>${accuracy}%</strong>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        `;
+                    });
+                } else {
+                    list.innerHTML = '<div style="text-align: center; color: #8c92a6; padding: 20px;">No active feeds available.</div>';
+                }
+            } catch (err) {
+                console.error(err);
+            }
+        }
+        
+        // Fetch feeds on load
+        fetchFeeds();
+
+
+    </script>
+</body>
+</html>

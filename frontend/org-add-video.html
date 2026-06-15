@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlowSense AI - Upload Video</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="stylesheet" href="dashboard.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- Sidebar -->
+        <nav class="sidebar">
+            <div class="sidebar-logo">
+                <div class="logo-icon">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
+                </div>
+                <h2>FlowSense Org</h2>
+            </div>
+            <div class="nav-menu">
+                <a href="org-add-video.html" class="nav-item active">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="17 8 12 3 7 8"></polyline><line x1="12" y1="3" x2="12" y2="15"></line></svg>
+                    <span>Upload</span>
+                </a>
+                <a href="org-cctv.html" class="nav-item">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path><circle cx="12" cy="13" r="4"></circle></svg>
+                    <span>CCTV</span>
+                </a>
+                <a href="org-settings.html" class="nav-item">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
+                    <span>Settings</span>
+                </a>
+            </div>
+        </nav>
+
+        <!-- Scrollable Content -->
+        <div class="main-content">
+            <header class="top-bar">
+                <div class="logo-area">
+                    <h2>Add Video</h2>
+                </div>
+
+            </header>
+
+            <p style="color: #8c92a6; font-size: 14px; margin-top: 8px;">Upload pre-recorded video files for analysis.</p>
+
+            <div style="margin-top: 24px; margin-bottom: 16px;">
+                <input type="text" id="cctvName" placeholder="CCTV Name (e.g. Main Entrance)" style="width: 100%; padding: 14px 16px; background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 12px; color: white; font-size: 16px; box-sizing: border-box; outline: none; transition: all 0.3s ease;">
+            </div>
+
+            <div class="upload-dropzone" id="dropzone" onclick="document.getElementById('fileInput').click()">
+                <div class="upload-icon">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#1cb5e0" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="17 8 12 3 7 8"></polyline><line x1="12" y1="3" x2="12" y2="15"></line></svg>
+                </div>
+                <div class="upload-text" id="uploadText">Select your video here</div>
+                <div class="upload-subtext" id="uploadSubtext">MP4, AVI, or MKV up to 2GB</div>
+                <button class="btn-primary" style="width: auto; padding: 12px 32px; border-radius: 12px; font-weight: 600;" id="btnBrowse">Browse Files</button>
+                <input type="file" id="fileInput" accept="video/*" style="display:none;" />
+            </div>
+            
+            <h3 style="color: white; margin-top: 32px; margin-bottom: 16px;">Uploaded Videos</h3>
+            <div id="uploadedVideosList" style="display: flex; flex-direction: column; gap: 12px; padding-bottom: 40px;">
+                <div style="text-align: center; color: #8c92a6;">Loading videos...</div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const fileInput = document.getElementById('fileInput');
+        const uploadText = document.getElementById('uploadText');
+        const uploadSubtext = document.getElementById('uploadSubtext');
+        const btnBrowse = document.getElementById('btnBrowse');
+
+        fileInput.addEventListener('change', async (e) => {
+            if (e.target.files.length > 0) {
+                const file = e.target.files[0];
+                const cctvName = document.getElementById('cctvName').value.trim();
+                
+                if (!cctvName) {
+                    alert("Please enter a CCTV Name first.");
+                    fileInput.value = "";
+                    return;
+                }
+
+                uploadText.innerText = "Uploading: " + file.name;
+                uploadSubtext.innerText = "Please wait...";
+                btnBrowse.style.display = "none";
+                
+                const orgId = localStorage.getItem('orgId');
+                if (!orgId) {
+                    alert("Please login first.");
+                    return;
+                }
+                
+                const formData = new FormData();
+                formData.append('org_id', orgId);
+                formData.append('title', cctvName);
+                formData.append('video_file', file);
+                
+                try {
+                    const response = await fetch('http://localhost/flowsense%20backend/api/org/upload_video.php', {
+                        method: 'POST',
+                        body: formData
+                    });
+                    
+                    const result = await response.json();
+                    if (response.ok) {
+                        uploadText.innerText = "Upload Complete!";
+                        uploadSubtext.innerText = "Your video has been added to the feed.";
+                        document.getElementById('cctvName').value = "";
+                        fetchVideos();
+                        setTimeout(() => {
+                            uploadText.innerText = "Select your video here";
+                            uploadSubtext.innerText = "MP4, AVI, or MKV up to 2GB";
+                            btnBrowse.style.display = "block";
+                            fileInput.value = "";
+                        }, 3000);
+                    } else {
+                        alert("Upload failed: " + result.message);
+                        resetUploadUI();
+                    }
+                } catch (err) {
+                    console.error(err);
+                    alert("Connection error during upload.");
+                    resetUploadUI();
+                }
+            }
+        });
+
+        async function fetchVideos() {
+            const orgId = localStorage.getItem('orgId');
+            if (!orgId) return;
+            
+            try {
+                const response = await fetch(`http://localhost/flowsense%20backend/api/org/get_videos.php?org_id=${orgId}`);
+                const result = await response.json();
+                const list = document.getElementById('uploadedVideosList');
+                list.innerHTML = '';
+                
+                if (result.videos && result.videos.length > 0) {
+                    result.videos.forEach(video => {
+                        list.innerHTML += `
+                            <div style="background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.05); border-radius: 12px; padding: 16px; display: flex; justify-content: space-between; align-items: center;">
+                                <div>
+                                    <h4 style="color: white; margin: 0 0 4px 0; font-size: 16px;">${video.title}</h4>
+                                    <p style="color: #8c92a6; margin: 0; font-size: 12px;">Uploaded: ${video.created_at}</p>
+                                </div>
+                                <button onclick="deleteVideo(${video.id})" style="background: rgba(255, 75, 75, 0.1); border: none; border-radius: 8px; width: 36px; height: 36px; display: flex; align-items: center; justify-content: center; cursor: pointer;">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#ff4b4b" stroke-width="2"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path></svg>
+                                </button>
+                            </div>
+                        `;
+                    });
+                } else {
+                    list.innerHTML = '<div style="text-align: center; color: #8c92a6;">No videos uploaded yet.</div>';
+                }
+            } catch (err) {
+                console.error(err);
+                document.getElementById('uploadedVideosList').innerHTML = '<div style="text-align: center; color: #ff4b4b;">Failed to load videos.</div>';
+            }
+        }
+
+        async function deleteVideo(id) {
+            if (!confirm('Are you sure you want to delete this video?')) return;
+            
+            try {
+                const orgId = localStorage.getItem('orgId');
+                const response = await fetch(`http://localhost/flowsense%20backend/api/org/delete_video.php`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ video_id: id, org_id: orgId })
+                });
+                const result = await response.json();
+                
+                if (response.ok) {
+                    fetchVideos();
+                } else {
+                    alert('Failed to delete video: ' + (result.message || 'Unknown error'));
+                }
+            } catch (err) {
+                console.error(err);
+                alert('Connection error during deletion.');
+            }
+        }
+        
+        // Fetch videos on page load
+        fetchVideos();
+
+        function resetUploadUI() {
+            uploadText.innerText = "Select your video here";
+            uploadSubtext.innerText = "MP4, AVI, or MKV up to 2GB";
+            btnBrowse.style.display = "block";
+            fileInput.value = "";
+        }
+    </script>
+</body>
+</html>

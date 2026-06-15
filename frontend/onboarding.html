@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlowSense AI - Onboarding</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="stylesheet" href="onboarding.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="onboarding-container">
+        <a href="javascript:void(0)" class="skip-btn">Skip</a>
+        
+        <div class="slider-wrapper">
+            <div class="slider" id="slider">
+                <!-- Slide 1 -->
+                <div class="slide">
+                    <div class="icon-container">
+                        <div class="floating-dot"></div>
+                        <div class="floating-dash"></div>
+                        <div class="main-circle">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                                <circle cx="12" cy="12" r="3"></circle>
+                            </svg>
+                        </div>
+                    </div>
+                    <h2>Monitor live crowd density</h2>
+                    <p>Get real-time updates on crowd levels at hospitals, banks, and public offices before you visit.</p>
+                </div>
+                <!-- Slide 2 -->
+                <div class="slide">
+                    <div class="icon-container">
+                        <div class="floating-dot"></div>
+                        <div class="floating-dash"></div>
+                        <div class="main-circle">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <polyline points="12 6 12 12 16 14"></polyline>
+                            </svg>
+                        </div>
+                    </div>
+                    <h2>Predict waiting time using AI</h2>
+                    <p>Our advanced AI analyzes historical data and live feeds to give you highly accurate wait time predictions.</p>
+                </div>
+                <!-- Slide 3 -->
+                <div class="slide">
+                    <div class="icon-container">
+                        <div class="floating-dot"></div>
+                        <div class="floating-dash"></div>
+                        <div class="main-circle">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                                <polyline points="9 12 11 14 15 10"></polyline>
+                            </svg>
+                        </div>
+                    </div>
+                    <h2>Avoid queues & save time</h2>
+                    <p>Plan your visits during off-peak hours and never waste your valuable time standing in long lines again.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="bottom-controls">
+            <div class="dots-container" id="dots">
+                <div class="dot active"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+            </div>
+            <button class="primary-btn" id="nextBtn">Continue <span class="arrow">›</span></button>
+        </div>
+    </div>
+    <script src="onboarding.js"></script>
+</body>
+</html>

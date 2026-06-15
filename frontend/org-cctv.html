@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlowSense AI - Connect CCTV</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="stylesheet" href="dashboard.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="dashboard-container">
+        
+        <!-- Sidebar -->
+        <nav class="sidebar">
+            <div class="sidebar-logo">
+                <div class="logo-icon">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
+                </div>
+                <h2>FlowSense Org</h2>
+            </div>
+            <div class="nav-menu">
+                <a href="org-add-video.html" class="nav-item">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="17 8 12 3 7 8"></polyline><line x1="12" y1="3" x2="12" y2="15"></line></svg>
+                    <span>Upload</span>
+                </a>
+                <a href="org-cctv.html" class="nav-item active">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path><circle cx="12" cy="13" r="4"></circle></svg>
+                    <span>CCTV</span>
+                </a>
+                <a href="org-settings.html" class="nav-item">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
+                    <span>Settings</span>
+                </a>
+            </div>
+        </nav>
+
+        <!-- Scrollable Content -->
+        <div class="main-content">
+            <header class="top-bar">
+                <div class="logo-area">
+                    <h2>Connect CCTV</h2>
+                </div>
+
+            </header>
+
+            <p style="color: #8c92a6; font-size: 14px; margin-top: 8px;">Add a new IP camera or RTSP stream.</p>
+
+            <div class="cctv-form">
+                <input type="text" id="camName" placeholder="Camera Name (e.g. Main Entrance)">
+                <input type="text" id="camLoc" placeholder="Location">
+                <input type="text" id="camUrl" placeholder="RTSP Stream URL (e.g. rtsp://192.168.1.10:554)">
+                <input type="text" placeholder="Username (Optional)">
+                <input type="password" placeholder="Password (Optional)">
+                <button class="primary-btn" onclick="connectCamera()" style="margin-top: 8px;">Connect Camera</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        async function connectCamera() {
+            const name = document.getElementById('camName').value || 'New Camera';
+            const url = document.getElementById('camUrl').value;
+            
+            if (!url) {
+                alert('Please enter an RTSP Stream URL to connect.');
+                return;
+            }
+
+            const connectBtn = document.querySelector('.primary-btn');
+            connectBtn.innerText = 'Connecting...';
+            connectBtn.style.opacity = '0.7';
+
+            try {
+                // For demo purposes, we fetch an existing processed feed to simulate the live RTSP analytics stream
+                const response = await fetch('http://localhost/flowsense%20backend/api/user/get_feeds.php');
+                const result = await response.json();
+                
+                let simPath = '';
+                if (result.feeds && result.feeds.length > 0) {
+                    simPath = result.feeds[0].file_path;
+                }
+                
+                // Redirect to Live Analysis
+                window.location.href = `live-analysis.html?video_path=${encodeURIComponent(simPath)}&title=${encodeURIComponent(name + ' (CCTV)')}`;
+            } catch (err) {
+                alert('Failed to establish connection. Please check network.');
+                connectBtn.innerText = 'Connect Camera';
+                connectBtn.style.opacity = '1';
+            }
+        }
+    </script>
+</body>
+</html>

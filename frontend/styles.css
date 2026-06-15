@@ -1,0 +1,69 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: radial-gradient(circle at center, #1a1b3c 0%, #060714 100%);
+    color: white;
+    font-family: 'Inter', sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.splash-container {
+    text-align: center;
+    animation: fadeIn 1s ease-out;
+}
+
+.logo-box {
+    width: 96px;
+    height: 96px;
+    background: linear-gradient(135deg, #1cb5e0 0%, #764ba2 100%);
+    border-radius: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 24px;
+    box-shadow: 0 10px 30px rgba(28, 181, 224, 0.3);
+    animation: pulse 2s infinite ease-in-out;
+}
+
+.logo-box svg {
+    width: 48px;
+    height: 48px;
+}
+
+.brand-name {
+    font-size: 36px;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    margin-bottom: 8px;
+}
+
+.ai-text {
+    background: linear-gradient(to right, #1cb5e0, #764ba2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.subtitle {
+    color: #8c92a6;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); box-shadow: 0 10px 30px rgba(28, 181, 224, 0.3); }
+    50% { transform: scale(1.05); box-shadow: 0 15px 40px rgba(118, 75, 162, 0.5); }
+    100% { transform: scale(1); box-shadow: 0 10px 30px rgba(28, 181, 224, 0.3); }
+}
