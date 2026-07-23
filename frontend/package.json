@@ -1,0 +1,27 @@
+{
+  "name": "flowsense-frontend",
+  "version": "1.0.0",
+  "description": "FlowSense Web Application Frontend & E2E Testing Suite",
+  "main": "script.js",
+  "scripts": {
+    "test": "node run-tests.js",
+    "test:e2e": "node run-tests.js",
+    "serve": "npx serve . -p 8080"
+  },
+  "keywords": [
+    "selenium",
+    "e2e",
+    "testing",
+    "flowsense"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chai": "^4.3.10",
+    "chromedriver": "^131.0.0",
+    "exceljs": "^4.4.0",
+    "mocha": "^10.7.3",
+    "selenium-webdriver": "^4.27.0",
+    "serve": "^14.2.4"
+  }
+}
