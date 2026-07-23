@@ -1,0 +1,26 @@
+{
+  "name": "flowsense-android-e2e",
+  "version": "1.0.0",
+  "description": "FlowSense Android Appium E2E Testing Suite (300 Test Cases)",
+  "main": "run-tests.js",
+  "scripts": {
+    "test": "node run-tests.js",
+    "test:appium": "node run-tests.js"
+  },
+  "keywords": [
+    "appium",
+    "webdriverio",
+    "android",
+    "e2e",
+    "testing",
+    "flowsense"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chai": "^4.3.10",
+    "exceljs": "^4.4.0",
+    "mocha": "^10.7.3",
+    "webdriverio": "^8.40.0"
+  }
+}
