@@ -18,9 +18,9 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "chai": "^4.3.10",
+    "chai": "^4.5.0",
     "exceljs": "^4.4.0",
-    "mocha": "^10.7.3",
-    "webdriverio": "^8.40.0"
+    "mocha": "^10.8.2",
+    "webdriverio": "^8.46.0"
   }
 }
