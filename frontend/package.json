@@ -18,7 +18,6 @@
   "license": "ISC",
   "dependencies": {
     "chai": "^4.3.10",
-    "chromedriver": "^131.0.0",
     "exceljs": "^4.4.0",
     "mocha": "^10.7.3",
     "selenium-webdriver": "^4.27.0",
