@@ -88,8 +88,10 @@ describe('FlowSense Web Application E2E Tests', function () {
         const title = await driver.getTitle();
         expect(title).to.include('Create Account');
 
-        const form = await driver.findElement(By.id('authForm'));
-        expect(await form.isDisplayed()).to.be.true;
+        const emailInput = await driver.wait(until.elementLocated(By.id('email')), 5000);
+        const submitBtn = await driver.wait(until.elementLocated(By.className('primary-btn')), 5000);
+        expect(await emailInput.isDisplayed()).to.be.true;
+        expect(await submitBtn.isDisplayed()).to.be.true;
     });
 
     it('6. Organization Signup Page - Should render form inputs properly', async function () {
@@ -97,8 +99,10 @@ describe('FlowSense Web Application E2E Tests', function () {
         const title = await driver.getTitle();
         expect(title).to.include('Create Organization');
 
-        const form = await driver.findElement(By.id('authForm'));
-        expect(await form.isDisplayed()).to.be.true;
+        const emailInput = await driver.wait(until.elementLocated(By.id('email')), 5000);
+        const submitBtn = await driver.wait(until.elementLocated(By.className('primary-btn')), 5000);
+        expect(await emailInput.isDisplayed()).to.be.true;
+        expect(await submitBtn.isDisplayed()).to.be.true;
     });
 
     it('7. User Dashboard Page - Should load navigation and sections', async function () {
